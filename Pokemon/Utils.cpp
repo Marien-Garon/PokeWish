@@ -14,7 +14,7 @@ namespace Utils {
 		AsciiFont['F'] = { " _____ ", "|   __|", "|   __|", "|__|   ", "       " };
 		AsciiFont['G'] = { " _____ ", "|   __|", "|  |  |", "|_____|", "       " };
 		AsciiFont['H'] = { " _____ ", "|  |  |", "|     |", "|__|__|", "       " };
-		AsciiFont['I'] = { " _____ ", "|     |", "|-   -|", "|_____|", "       " };
+		AsciiFont['I'] = { "  ___  ", " |   | ", " |- -| ", " |___| ", "       " };
 		AsciiFont['J'] = { "    __ ", " __|  |", "|  |  |", "|_____|", "       " };
 		AsciiFont['K'] = { " _____ ", "|  |  |", "|    -|", "|__|__|", "       " };
 		AsciiFont['L'] = { " __    ", "|  |   ", "|  |__ ", "|_____|", "       " };
@@ -63,6 +63,26 @@ namespace Utils {
 
 	}
 
+	void activerSupportUnicode() {
+		// 1. Définir la page de code en UTF-8
+		SetConsoleOutputCP(CP_UTF8);
+		SetConsoleCP(CP_UTF8);
+
+		// 2. Activer le mode de traitement virtuel du terminal (pour ANSI)
+		HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
+		if (hOut == INVALID_HANDLE_VALUE) return;
+
+		DWORD dwMode = 0;
+		if (!GetConsoleMode(hOut, &dwMode)) return;
+
+		dwMode |= ENABLE_VIRTUAL_TERMINAL_PROCESSING;
+		SetConsoleMode(hOut, dwMode);
+	}
+
+	void setConsoleSizeANSI(int width, int height) {
+		// Séquence : ESC[8;lignes;colonnes;t
+		std::cout << "\033[8;" << height << ";" << width << "t" << std::flush;
+	}
 
 	void SetConsoleToUTF8()
 	{
@@ -123,5 +143,10 @@ namespace Utils {
 	{
 		return (GetConsoleWidth() - length) / 2;
 	}
+
+	//Type* StringToType(std::string typeName)
+	//{
+
+	//}
 }
 

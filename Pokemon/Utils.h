@@ -1,4 +1,5 @@
 #pragma once
+#include "Type.h"
 #include <Windows.h>
 #include <string>
 #include <vector>
@@ -19,6 +20,10 @@ namespace Utils {
 		return value;
 	}
 
+	void activerSupportUnicode();
+
+	void setConsoleSizeANSI(int width, int height);
+
 	void SetConsoleToUTF8();
 
 	void PrintTextToArt(std::string text);
@@ -30,4 +35,6 @@ namespace Utils {
 	void AddChar(int quantity, char c);
 
 	int CalculatePos(int length);
+
+	//Type* StringToType(std::string typeName);
 }

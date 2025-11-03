@@ -13,7 +13,7 @@ class PokemonManager
 public:
 	std::vector<Pokemon> allPokemon;
 
-	void InitialisePokemon();
+	void InitialisePokemon(TypeManager* tm);
 
 	Pokemon SearchPokemonByName(std::string pokeName);
 

@@ -9,9 +9,10 @@ void GameManager::Stop()
 
 void GameManager::Init()
 {
-	pokeManage.InitialisePokemon();
+	typeManage.InitType();
 
-	Utils::SetConsoleToUTF8();
+	pokeManage.InitialisePokemon(&typeManage);
+
 	Utils::InitAsciiArt();
 	state = GameState::MainMenu;
 	running = true;

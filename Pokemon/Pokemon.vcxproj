@@ -104,7 +104,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Utilisateur\Documents\GitHub\PokeWish\Pokemon\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\mgaron\Documents\GitHub\PokeWish\Pokemon\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -137,6 +138,8 @@
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="Pokemon.cpp" />
     <ClCompile Include="PokemonManager.cpp" />
+    <ClCompile Include="Type.cpp" />
+    <ClCompile Include="TypeManager.cpp" />
     <ClCompile Include="Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -148,10 +151,13 @@
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Pokemon.h" />
     <ClInclude Include="PokemonManager.h" />
+    <ClInclude Include="Type.h" />
+    <ClInclude Include="TypeManager.h" />
     <ClInclude Include="Utils.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="pokedex_fr.json" />
+    <None Include="type.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

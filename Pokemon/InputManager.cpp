@@ -14,7 +14,7 @@ Input InputManager::GetInput()
 	int key = _getch();
 	switch (key)
 	{
-	case 72:
+	case('Z'): case('z'): case 72:
 		return Input::Up;
 	case 80:
 		return Input::Down;

@@ -1,0 +1,92 @@
+[
+  {
+    "nom": "Acier",
+    "resistances": [ "Acier", "Dragon", "Fée", "Glace", "Insecte", "Normal", "Plante", "Psy", "Roche", "Vol" ],
+    "faiblesses": [ "Combat", "Feu", "Sol" ]
+  },
+  {
+    "nom": "Combat",
+    "resistances": [ "Insecte", "Ténèbres", "Roche" ],
+    "faiblesses": [ "Fée", "Psy", "Vol" ]
+  },
+  {
+    "nom": "Dragon",
+    "resistances": [ "Électrik", "Feu", "Plante", "Eau" ],
+    "faiblesses": [ "Dragon", "Fée", "Glace" ]
+  },
+  {
+    "nom": "Eau",
+    "resistances": [ "Acier", "Feu", "Glace", "Eau" ],
+    "faiblesses": [ "Électrik", "Plante" ]
+  },
+  {
+    "nom": "Électrik",
+    "resistances": [ "Acier", "Électrik", "Vol" ],
+    "faiblesses": [ "Sol" ]
+  },
+  {
+    "nom": "Fée",
+    "resistances": [ "Combat", "Insecte", "Ténèbres" ],
+    "faiblesses": [ "Acier", "Poison" ]
+  },
+  {
+    "nom": "Feu",
+    "resistances": [ "Acier", "Fée", "Feu", "Glace", "Insecte", "Plante" ],
+    "faiblesses": [ "Eau", "Roche", "Sol" ]
+  },
+  {
+    "nom": "Glace",
+    "resistances": [ "Glace" ],
+    "faiblesses": [ "Acier", "Combat", "Feu", "Roche" ]
+  },
+  {
+    "nom": "Insecte",
+    "resistances": [ "Combat", "Plante", "Sol" ],
+    "faiblesses": [ "Feu", "Roche", "Vol" ]
+  },
+  {
+    "nom": "Normal",
+    "resistances": [],
+    "faiblesses": [ "Combat" ]
+  },
+  {
+    "nom": "Plante",
+    "resistances": [ "Électrik", "Plante", "Sol", "Eau" ],
+    "faiblesses": [ "Feu", "Glace", "Insecte", "Poison", "Vol" ]
+  },
+  {
+    "nom": "Poison",
+    "resistances": [ "Combat", "Fée", "Insecte", "Plante", "Poison" ],
+    "faiblesses": [ "Psy", "Sol" ]
+  },
+  {
+    "nom": "Psy",
+    "resistances": [ "Combat", "Psy" ],
+    "faiblesses": [ "Insecte", "Spectre", "Ténèbres" ]
+  },
+  {
+    "nom": "Roche",
+    "resistances": [ "Feu", "Normal", "Poison", "Vol" ],
+    "faiblesses": [ "Acier", "Combat", "Eau", "Plante", "Sol" ]
+  },
+  {
+    "nom": "Sol",
+    "resistances": [ "Poison", "Roche" ],
+    "faiblesses": [ "Eau", "Glace", "Plante" ]
+  },
+  {
+    "nom": "Spectre",
+    "resistances": [ "Insecte", "Poison" ],
+    "faiblesses": [ "Spectre", "Ténèbres" ]
+  },
+  {
+    "nom": "Ténèbres",
+    "resistances": [ "Spectre", "Ténèbres" ],
+    "faiblesses": [ "Combat", "Fée", "Insecte" ]
+  },
+  {
+    "nom": "Vol",
+    "resistances": [ "Combat", "Insecte", "Plante" ],
+    "faiblesses": [ "Électrik", "Glace", "Roche" ]
+  }
+]

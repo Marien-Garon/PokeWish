@@ -71,7 +71,7 @@ void DysplayManager::CreditsMenu(GameManager* gm)
 			Utils::AddChar(startPos, ' ');
 			std::cout << "A peu pres tout : Moi" << std::endl;
 			Utils::AddChar(startPos, ' ');
-			std::cout << "Il a copie je copie : Eliott" << std::endl;
+			std::cout << "Il a copié je copie : Eliott" << std::endl;
 			Utils::AddChar(startPos, ' ');
 			std::cout << "Lenny : Lenny" << std::endl;
 		}

@@ -4,6 +4,8 @@
 
 int main()
 {
+	Utils::activerSupportUnicode();
+
 	GameManager gm;
 	gm.Init();
 	gm.Loop();

@@ -2,6 +2,7 @@
 #include "Utils.h"
 #include "DysplayManager.h"
 #include "PokemonManager.h"
+#include "TypeManager.h"
 
 enum class GameState
 {
@@ -18,6 +19,8 @@ public:
 	bool running;
 	GameState state;
 	GameState previousState;
+
+	TypeManager typeManage;
 
 	PokemonManager pokeManage;
 

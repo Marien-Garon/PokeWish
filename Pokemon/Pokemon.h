@@ -2,6 +2,7 @@
 #include "Entity.h"
 #include "iostream"
 #include "Utils.h"
+#include "TypeManager.h"
 
 class Pokemon : public Entity
 {
@@ -18,6 +19,8 @@ public:
 
 	bool canEvolve;
 	int evolutionID;
+
+	std::vector<Type*> type;
 
 	void DysplayStat();
 
