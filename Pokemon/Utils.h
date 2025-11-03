@@ -7,7 +7,7 @@
 
 namespace Utils {
 
-	extern std::vector<std::vector<const char*>> AsciiFont;
+	extern std::vector<std::vector<std::string>> AsciiFont;
 
 	void InitAsciiArt();
 

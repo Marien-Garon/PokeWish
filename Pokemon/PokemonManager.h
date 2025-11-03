@@ -17,7 +17,6 @@ public:
 
 	Pokemon SearchPokemonByName(std::string pokeName);
 
-	Pokemon SearchPokemonByType(int id);
-
+	Pokemon SearchPokemonByID(int id);
 };
 

@@ -1,3 +1,2 @@
-﻿  PokemonManager.cpp
-C:\Users\Utilisateur\Documents\GitHub\PokeWish\Pokemon\PokemonManager.cpp(44,1): warning C4715: 'PokemonManager::SearchPokemonByName' : les chemins de contrôle ne retournent pas tous une valeur
+﻿  GameManager.cpp
   Pokemon.vcxproj -> C:\Users\Utilisateur\Documents\GitHub\PokeWish\x64\Debug\Pokemon.exe

@@ -42,6 +42,13 @@ void DysplayManager::MainMenu(GameManager* gm)
 		}
 	));
 
+	mainMenu.AddButton(std::make_unique<Button>("DysplayTest",
+		[gm]() {
+			gm->previousState = gm->state;
+			gm->state = GameState::PokeDysplay;
+		}
+	));
+
 	mainMenu.NavigateToMenu();
 }
 
@@ -67,6 +74,26 @@ void DysplayManager::CreditsMenu(GameManager* gm)
 			std::cout << "Il a copie je copie : Eliott" << std::endl;
 			Utils::AddChar(startPos, ' ');
 			std::cout << "Lenny : Lenny" << std::endl;
+		}
+	);
+}
+
+void DysplayManager::PokeDysplay(GameManager* gm)
+{
+	Menu PokeMenu = { gm->CurrentPokemon.name };
+
+	PokeMenu.AddButton(std::make_unique<Button>("Back",
+		[gm]() {
+			gm->previousState = gm->state;
+			gm->state = GameState::MainMenu;
+		}
+	));
+
+
+	PokeMenu.NavigateToMenu(
+		[gm]() 
+		{
+			gm->CurrentPokemon.DysplayStat();
 		}
 	);
 }

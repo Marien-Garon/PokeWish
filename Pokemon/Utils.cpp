@@ -2,7 +2,7 @@
 
 namespace Utils {
 
-	std::vector<std::vector<const char*>> AsciiFont(128);
+	std::vector<std::vector<std::string>> AsciiFont(128);
 
 	void InitAsciiArt()
 	{
@@ -34,6 +34,33 @@ namespace Utils {
 		AsciiFont['Z'] = { " _____ ", "|__   |", "|   __|", "|_____|", "       " };
 		AsciiFont[' '] = { "       ", "       ", "       ", "       ", "       " };
 
+		AsciiFont['a'] = { "     ", " ___ ", "| .'|", "|__,|", "     " };
+		AsciiFont['b'] = { " _   ", "| |_ ", "| . |", "|___|", "     " };
+		AsciiFont['c'] = { "     ", " ___ ", "|  _|", "|___|", "     " };
+		AsciiFont['d'] = { "   _ ", " _| |", "| . |", "|___|", "     " };
+		AsciiFont['e'] = { "     ", " ___ ", "| -_|", "|___|", "     " };
+		AsciiFont['f'] = { " ___ ", "|  _|", "|  _|", "|_|  ", "     " };
+		AsciiFont['g'] = { "     ", " ___ ", "| . |", "|_  |", "|___|" };
+		AsciiFont['h'] = { " _   ", "| |_ ", "|   |", "|_|_|", "     " };
+		AsciiFont['i'] = { "  _  ", " |_| ", " | | ", " |_| ", "     " };
+		AsciiFont['j'] = { "   _ ", "  |_|", "  | |", " _| |", "|___|" };
+		AsciiFont['k'] = { " _   ", "| |_ ", "| '_|", "|_,_|", "     " };
+		AsciiFont['l'] = { "  _  ", " | | ", " | | ", " |_| ", "     " };
+		AsciiFont['m'] = { "      ", " _____ ", "|     |", "|_|_|_|", "      " };
+		AsciiFont['n'] = { "     ", " ___ ", "|   |", "|_|_|", "     " };
+		AsciiFont['o'] = { "     ", " ___ ", "| . |", "|___|", "     " };
+		AsciiFont['p'] = { "     ", " ___ ", "| . |", "|  _|", "|_|  " };
+		AsciiFont['q'] = { "     ", " ___ ", "| . |", "|_  |", "  |_|" };
+		AsciiFont['r'] = { "     ", " ___ ", "|  _|", "|_|  ", "     " };
+		AsciiFont['s'] = { "     ", " ___ ", "|_ -|", "|___|", "     " };
+		AsciiFont['t'] = { " _   ", "| |_ ", "|  _|", "|_|  ", "     " };
+		AsciiFont['u'] = { "     ", " _ _ ", "| | |", "|___|", "     " };
+		AsciiFont['v'] = { "     ", " _ _ ", "| | |", " \\_/ ", "     " };
+		AsciiFont['w'] = { "      ", " _ _ _ ", "| | | |", "|_____|", "      " };
+		AsciiFont['x'] = { "     ", " _ _ ", "|_'_|", "|_,_|", "     " };
+		AsciiFont['y'] = { "     ", " _ _ ", "| | |", "|_  |", "|___|" };
+		AsciiFont['z'] = { "     ", " ___ ", "|- _|", "|___|", "     " };
+
 	}
 
 
@@ -53,11 +80,14 @@ namespace Utils {
 			AddChar(startPos-1,' ');
 			//std::cout << "|";
 
+			int charSize = 0;
+
 			for (int j = 0; j < text.size(); ++j)
 			{
 				std::cout << AsciiFont[text[j]][i];
+				charSize += AsciiFont[text[j]][i].size();
 			}
-			AddChar(GetConsoleWidth() - (startPos + (int)text.size()*7) - 1, ' ');
+			AddChar(GetConsoleWidth() - (startPos + charSize) - 1, ' ');
 			std::cout << "|";
 			std::cout << std::endl;
 		}

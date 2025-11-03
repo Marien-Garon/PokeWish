@@ -16,4 +16,6 @@ public:
 	void MainMenu(GameManager* gm);
 
 	void CreditsMenu(GameManager* gm);
+
+	void PokeDysplay(GameManager* gm);
 };

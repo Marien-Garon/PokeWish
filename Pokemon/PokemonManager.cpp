@@ -2,7 +2,7 @@
 
 void PokemonManager::InitialisePokemon()
 {
-	std::ifstream file("./pokedex_fr.json");  //ça marche pas du tout lets gooooooo
+	std::ifstream file("pokedex_fr.json");  //ça marche pas du tout lets gooooooo
 	if (!file.is_open()) {
 		std::cerr << "erreur : impossible d'ouvrir le fichier" << std::endl;
 		return;
@@ -43,7 +43,7 @@ Pokemon PokemonManager::SearchPokemonByName(std::string pokeName)
 	}
 }
 
-Pokemon PokemonManager::SearchPokemonByType(int id)
+Pokemon PokemonManager::SearchPokemonByID(int id)
 {
-	return allPokemon[id];
+	return allPokemon[id-1];
 }

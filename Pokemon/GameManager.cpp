@@ -15,6 +15,8 @@ void GameManager::Init()
 	Utils::InitAsciiArt();
 	state = GameState::MainMenu;
 	running = true;
+
+	CurrentPokemon = pokeManage.SearchPokemonByID(3);
 }
 
 
@@ -34,6 +36,9 @@ void GameManager::Loop()
 			break;
 		case GameState::credits:
 			dm.CreditsMenu(this);
+			break;
+		case GameState::PokeDysplay:
+			dm.PokeDysplay(this);
 			break;
 		}
 	}

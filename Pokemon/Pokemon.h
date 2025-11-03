@@ -1,5 +1,7 @@
 #pragma once
 #include "Entity.h"
+#include "iostream"
+#include "Utils.h"
 
 class Pokemon : public Entity
 {
@@ -7,7 +9,7 @@ public:
 	int id;
 
 	int hp;
-	int maxhp;
+	//int maxhp;
 	int atk;
 	int def;
 	int atkspe;
@@ -17,6 +19,7 @@ public:
 	bool canEvolve;
 	int evolutionID;
 
+	void DysplayStat();
 
 };
 

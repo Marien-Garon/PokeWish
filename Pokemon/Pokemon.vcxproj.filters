@@ -25,9 +25,6 @@
     <Filter Include="Fichiers d%27en-tête\Entity">
       <UniqueIdentifier>{52d5d547-46d8-4c02-bd05-d254696a6cab}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Fichiers d%27en-tête\data">
-      <UniqueIdentifier>{b32b1f68-db09-4ad9-b935-ab4e0f91c82a}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -92,7 +89,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="pokedex_fr.json">
-      <Filter>Fichiers d%27en-tête\data</Filter>
+      <Filter>Fichiers de ressources</Filter>
     </None>
   </ItemGroup>
 </Project>

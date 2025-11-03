@@ -7,7 +7,8 @@ enum class GameState
 {
 	testMenu,
 	MainMenu,
-	credits
+	credits,
+	PokeDysplay
 };
 
 class GameManager
@@ -19,6 +20,8 @@ public:
 	GameState previousState;
 
 	PokemonManager pokeManage;
+
+	Pokemon CurrentPokemon;
 
 	void Stop();
 
