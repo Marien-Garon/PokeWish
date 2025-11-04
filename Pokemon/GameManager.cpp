@@ -17,7 +17,7 @@ void GameManager::Init()
 	state = GameState::MainMenu;
 	running = true;
 
-	CurrentPokemon = pokeManage.SearchPokemonByID(3);
+	CurrentPokemon = pokeManage.SearchPokemonByID(4);
 }
 
 

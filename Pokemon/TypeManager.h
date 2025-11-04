@@ -9,7 +9,7 @@ using json = nlohmann::json;
 class TypeManager
 {
 public:
-	std::vector<Type*> TypeList;
+	std::vector<Type> TypeList;
 
 	Type* SearchTypeByName(std::string name);
 

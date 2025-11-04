@@ -1,5 +1,10 @@
-﻿  PokemonManager.cpp
-  TypeManager.cpp
-  Génération de code en cours...
-C:\Users\mgaron\Documents\GitHub\PokeWish\Pokemon\PokemonManager.cpp(48): warning C4715: 'PokemonManager::SearchPokemonByName' : les chemins de contrôle ne retournent pas tous une valeur
-  Pokemon.vcxproj -> C:\Users\mgaron\Documents\GitHub\PokeWish\x64\Debug\Pokemon.exe
+﻿  TypeManager.cpp
+C:\Users\Utilisateur\Documents\GitHub\PokeWish\Pokemon\TypeManager.cpp(53,17): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\Utilisateur\Documents\GitHub\PokeWish\Pokemon\TypeManager.cpp(53,8): error C2146: erreur de syntaxe : absence de ';' avant l'identificateur 'maSource'
+C:\Users\Utilisateur\Documents\GitHub\PokeWish\Pokemon\TypeManager.cpp(53,19): error C2143: erreur de syntaxe : absence de ';' avant '{'
+C:\Users\Utilisateur\Documents\GitHub\PokeWish\Pokemon\TypeManager.cpp(53,19): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+C:\Users\Utilisateur\Documents\GitHub\PokeWish\Pokemon\TypeManager.cpp(54,1): error C3927: '->' : l'utilisation d'un type de retour de fin n'est pas autorisée après un déclarateur qui n'est pas un déclarateur de fonction
+C:\Users\Utilisateur\Documents\GitHub\PokeWish\Pokemon\TypeManager.cpp(54,9): error C3484: erreur de syntaxe : '->' attendu avant le type de retour
+C:\Users\Utilisateur\Documents\GitHub\PokeWish\Pokemon\TypeManager.cpp(54,10): error C3613: type de retour manquant après '->' ('int' pris par défaut)
+C:\Users\Utilisateur\Documents\GitHub\PokeWish\Pokemon\TypeManager.cpp(54,17): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\Utilisateur\Documents\GitHub\PokeWish\Pokemon\TypeManager.cpp(54,10): error C2146: erreur de syntaxe : absence de ';' avant l'identificateur 'Kronies'

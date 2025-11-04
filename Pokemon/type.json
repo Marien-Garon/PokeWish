@@ -1,37 +1,37 @@
 [
   {
     "nom": "Acier",
-    "resistances": [ "Acier", "Dragon", "Fée", "Glace", "Insecte", "Normal", "Plante", "Psy", "Roche", "Vol" ],
+    "resistances": [ "Acier", "Dragon", "Fee", "Glace", "Insecte", "Normal", "Plante", "Psy", "Roche", "Vol" ],
     "faiblesses": [ "Combat", "Feu", "Sol" ]
   },
   {
     "nom": "Combat",
-    "resistances": [ "Insecte", "Ténèbres", "Roche" ],
-    "faiblesses": [ "Fée", "Psy", "Vol" ]
+    "resistances": [ "Insecte", "Tenebres", "Roche" ],
+    "faiblesses": [ "Fee", "Psy", "Vol" ]
   },
   {
     "nom": "Dragon",
-    "resistances": [ "Électrik", "Feu", "Plante", "Eau" ],
-    "faiblesses": [ "Dragon", "Fée", "Glace" ]
+    "resistances": [ "Electrik", "Feu", "Plante", "Eau" ],
+    "faiblesses": [ "Dragon", "Fï¿½e", "Glace" ]
   },
   {
     "nom": "Eau",
     "resistances": [ "Acier", "Feu", "Glace", "Eau" ],
-    "faiblesses": [ "Électrik", "Plante" ]
+    "faiblesses": [ "ï¿½lectrik", "Plante" ]
   },
   {
-    "nom": "Électrik",
-    "resistances": [ "Acier", "Électrik", "Vol" ],
+    "nom": "Electrik",
+    "resistances": [ "Acier", "Electrik", "Vol" ],
     "faiblesses": [ "Sol" ]
   },
   {
-    "nom": "Fée",
-    "resistances": [ "Combat", "Insecte", "Ténèbres" ],
+    "nom": "Fee",
+    "resistances": [ "Combat", "Insecte", "Tï¿½nï¿½bres" ],
     "faiblesses": [ "Acier", "Poison" ]
   },
   {
     "nom": "Feu",
-    "resistances": [ "Acier", "Fée", "Feu", "Glace", "Insecte", "Plante" ],
+    "resistances": [ "Acier", "Fee", "Feu", "Glace", "Insecte", "Plante" ],
     "faiblesses": [ "Eau", "Roche", "Sol" ]
   },
   {
@@ -51,18 +51,18 @@
   },
   {
     "nom": "Plante",
-    "resistances": [ "Électrik", "Plante", "Sol", "Eau" ],
+    "resistances": [ "Electrik", "Plante", "Sol", "Eau" ],
     "faiblesses": [ "Feu", "Glace", "Insecte", "Poison", "Vol" ]
   },
   {
     "nom": "Poison",
-    "resistances": [ "Combat", "Fée", "Insecte", "Plante", "Poison" ],
+    "resistances": [ "Combat", "Fee", "Insecte", "Plante", "Poison" ],
     "faiblesses": [ "Psy", "Sol" ]
   },
   {
     "nom": "Psy",
     "resistances": [ "Combat", "Psy" ],
-    "faiblesses": [ "Insecte", "Spectre", "Ténèbres" ]
+    "faiblesses": [ "Insecte", "Spectre", "Tenebres" ]
   },
   {
     "nom": "Roche",
@@ -77,16 +77,16 @@
   {
     "nom": "Spectre",
     "resistances": [ "Insecte", "Poison" ],
-    "faiblesses": [ "Spectre", "Ténèbres" ]
+    "faiblesses": [ "Spectre", "Tenebres" ]
   },
   {
-    "nom": "Ténèbres",
-    "resistances": [ "Spectre", "Ténèbres" ],
-    "faiblesses": [ "Combat", "Fée", "Insecte" ]
+    "nom": "Tenebres",
+    "resistances": [ "Spectre", "Tenebres" ],
+    "faiblesses": [ "Combat", "Fee", "Insecte" ]
   },
   {
     "nom": "Vol",
     "resistances": [ "Combat", "Insecte", "Plante" ],
-    "faiblesses": [ "Électrik", "Glace", "Roche" ]
+    "faiblesses": [ "Electrik", "Glace", "Roche" ]
   }
 ]

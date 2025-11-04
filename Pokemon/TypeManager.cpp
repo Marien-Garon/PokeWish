@@ -5,8 +5,8 @@ Type* TypeManager::SearchTypeByName(std::string nameType)
 {
 	for (auto& type : TypeList)
 	{
-		if (type->name == nameType)
-			return type;
+		if (type.name == nameType)
+			return &type;
 	}
 	return nullptr;
 }
@@ -24,16 +24,17 @@ void TypeManager::InitType()
 	file >> data;
 	file.close();
 
-	for (auto& entry : data) 
+	for (auto& entry : data)
 	{
 		Type t;
-		t.name = entry.value("name", "none");
-		TypeList.push_back(&t);
+		t.name = entry.value("nom", "none");
+		TypeList.push_back(t);
 	}
 
 	for (size_t i = 0; i < data.size(); ++i) {
 		const auto& entry = data[i];
-		Type* t = TypeList[i];
+		Type* t = &TypeList[i];
+		std::cout << "eho : " << t->name << std::endl;
 
 		for (const std::string& resName : entry["resistances"]) {
 			if (Type* res = SearchTypeByName(resName))

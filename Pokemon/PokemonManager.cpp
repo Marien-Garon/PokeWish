@@ -17,8 +17,7 @@ void PokemonManager::InitialisePokemon(TypeManager* tm)
 		std::vector<std::string> strType;
 		p.id = entry.value("id", 0);
 		p.name = entry.value("nom", "inconnu");
-		strType.push_back("Plante");      //entry.value("types", std::vector<std::string>{});
-		strType.push_back("Poison");
+		strType = entry.value("types", std::vector<std::string>{});
 		for (int i = 0; i < strType.size(); ++i)
 		{
 			p.type.push_back(tm->SearchTypeByName(strType[i]));

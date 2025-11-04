@@ -5,12 +5,12 @@ void Pokemon::DysplayStat()
 	int startPos = Utils::CalculatePos(11);
 
 	Utils::AddChar(startPos, ' ');
-	std::cout << "Type : " << type[0]->name << std::endl;
+	std::cout << "Type 1 : " << type[0]->name << std::endl;
 
-	if (type[1] != nullptr)
+	if (type.size() > 1)
 	{
 		Utils::AddChar(startPos, ' ');
-		std::cout << "Type : " << type[1]->name << std::endl;
+		std::cout << "Type 2 : " << type[1]->name << std::endl;
 	}
  
 	Utils::AddChar(startPos, ' ');
