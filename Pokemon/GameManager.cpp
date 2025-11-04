@@ -17,7 +17,11 @@ void GameManager::Init()
 	state = GameState::MainMenu;
 	running = true;
 
-	CurrentPokemon = pokeManage.SearchPokemonByID(3);
+	CurrentPokemon = pokeManage.SearchPokemonByID(4);
+	Pokemon poke1 = pokeManage.SearchPokemonByName("Salameche");
+	Pokemon poke2 = pokeManage.SearchPokemonByName("Tortank");
+
+	player.AddPokemon({ poke1,poke2 });
 }
 
 
@@ -30,17 +34,23 @@ void GameManager::Loop()
 		switch (state)
 		{
 		case GameState::testMenu:
-			dm.TestMenu();
+			dm.TestMenu(this);
+			//previousState = GameState::testMenu;
 			break;
 		case GameState::MainMenu:
 			dm.MainMenu(this);
+			//previousState = GameState::MainMenu;
 			break;
 		case GameState::credits:
 			dm.CreditsMenu(this);
+			//previousState = GameState::credits;
 			break;
 		case GameState::PokeDysplay:
 			dm.PokeDysplay(this);
+			//previousState = GameState::PokeDysplay;
 			break;
+		case GameState::EquipDysplay:
+			dm.DysplayPlayerEquip(this, &player);
 		}
 	}
 }

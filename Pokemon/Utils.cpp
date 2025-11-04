@@ -68,15 +68,13 @@ namespace Utils {
 		SetConsoleOutputCP(CP_UTF8);
 		SetConsoleCP(CP_UTF8);
 
-		// 2. Activer le mode de traitement virtuel du terminal (pour ANSI)
+		// activer ANSI (pour couleurs)
 		HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
-		if (hOut == INVALID_HANDLE_VALUE) return;
+		DWORD mode = 0;
+		if (GetConsoleMode(hOut, &mode)) {
+			SetConsoleMode(hOut, mode | ENABLE_VIRTUAL_TERMINAL_PROCESSING);
+		}
 
-		DWORD dwMode = 0;
-		if (!GetConsoleMode(hOut, &dwMode)) return;
-
-		dwMode |= ENABLE_VIRTUAL_TERMINAL_PROCESSING;
-		SetConsoleMode(hOut, dwMode);
 	}
 
 	void setConsoleSizeANSI(int width, int height) {
@@ -105,7 +103,7 @@ namespace Utils {
 			for (int j = 0; j < text.size(); ++j)
 			{
 				std::cout << AsciiFont[text[j]][i];
-				charSize += AsciiFont[text[j]][i].size();
+				charSize += (int)AsciiFont[text[j]][i].size();
 			}
 			AddChar(GetConsoleWidth() - (startPos + charSize) - 1, ' ');
 			std::cout << "|";
@@ -143,6 +141,7 @@ namespace Utils {
 	{
 		return (GetConsoleWidth() - length) / 2;
 	}
+
 
 	//Type* StringToType(std::string typeName)
 	//{

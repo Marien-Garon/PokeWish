@@ -1,10 +1,11 @@
 #pragma once
 #include "Type.h"
+#include "Button.h" 
 #include <Windows.h>
 #include <string>
 #include <vector>
 #include <iostream>
-
+#include "Button.h" 
 
 namespace Utils {
 
@@ -35,6 +36,5 @@ namespace Utils {
 	void AddChar(int quantity, char c);
 
 	int CalculatePos(int length);
-
 	//Type* StringToType(std::string typeName);
 }

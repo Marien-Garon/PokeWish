@@ -28,6 +28,9 @@
     <Filter Include="Fichiers d%27en-tête\type">
       <UniqueIdentifier>{f19c72bc-e9e6-44f2-82b8-5a0c836244f9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\player">
+      <UniqueIdentifier>{c9cc996d-7a10-4f5a-b944-6c5bc20c543e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -66,6 +69,9 @@
     <ClCompile Include="TypeManager.cpp">
       <Filter>Fichiers d%27en-tête\type</Filter>
     </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Fichiers d%27en-tête\player</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DysplayManager.h">
@@ -101,6 +107,9 @@
     <ClInclude Include="TypeManager.h">
       <Filter>Fichiers d%27en-tête\type</Filter>
     </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Fichiers d%27en-tête\player</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="pokedex_fr.json">
@@ -109,5 +118,6 @@
     <None Include="type.json">
       <Filter>Fichiers de ressources</Filter>
     </None>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>

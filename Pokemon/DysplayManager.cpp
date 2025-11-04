@@ -1,7 +1,7 @@
 #include "DysplayManager.h"
 #include "GameManager.h"
 
-void DysplayManager::TestMenu()
+void DysplayManager::TestMenu(GameManager* gm)
 {
 	Menu testMenu = { "TEST QMENU" };
 
@@ -15,7 +15,7 @@ void DysplayManager::TestMenu()
 			std::cout << "Bouton 2 cliqué" << std::endl;
 	} ));
 	
-	testMenu.NavigateToMenu();
+	testMenu.NavigateToMenu(gm);
 }
 
 void DysplayManager::MainMenu(GameManager* gm)
@@ -49,7 +49,14 @@ void DysplayManager::MainMenu(GameManager* gm)
 		}
 	));
 
-	mainMenu.NavigateToMenu();
+	mainMenu.AddButton(std::make_unique<Button>("EquipDysplay",
+		[gm]() {
+			gm->previousState = gm->state;
+			gm->state = GameState::EquipDysplay;
+		}
+	));
+
+	mainMenu.NavigateToMenu(gm);
 }
 
 void DysplayManager::CreditsMenu(GameManager* gm)
@@ -63,7 +70,7 @@ void DysplayManager::CreditsMenu(GameManager* gm)
 		}
 	));
 
-	credits.NavigateToMenu(
+	credits.NavigateToMenu(gm,
 		[]() {
 			int startPos = Utils::CalculatePos(25);
 
@@ -90,10 +97,36 @@ void DysplayManager::PokeDysplay(GameManager* gm)
 	));
 
 
-	PokeMenu.NavigateToMenu(
+	PokeMenu.NavigateToMenu(gm,
 		[gm]() 
 		{
 			gm->CurrentPokemon.DysplayStat();
 		}
 	);
+}
+
+void DysplayManager::DysplayPlayerEquip(GameManager* gm, Player* player)
+{
+	Menu EquipDysplay = { "Equip" };
+
+	EquipDysplay.AddButton(std::make_unique<Button>("Back",
+		[gm]() {
+			gm->previousState = gm->state;
+			gm->state = GameState::MainMenu;
+		}
+	));
+
+	for (auto& poke : player->equip)
+	{
+		EquipDysplay.AddButton(std::make_unique<Button>(poke.name,
+			[gm, poke]() {
+				gm->previousState = gm->state;
+				gm->state = GameState::PokeDysplay;
+				gm->CurrentPokemon = poke;
+				gm->CurrentPokemon.DysplayStat();
+			}
+		));
+	}
+
+	EquipDysplay.NavigateToMenu(gm);
 }

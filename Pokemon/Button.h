@@ -17,7 +17,7 @@ public:
 		isSelected(select) {}
 
 
-	void DysplayButton();
+	void DysplayButton(int maxButtonLenght);
 
 	void Click();
 };

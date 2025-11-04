@@ -3,8 +3,10 @@
 #include "Button.h"
 #include "Utils.h"
 #include "InputManager.h"
+#include "GameManager.h"
 #include <iostream>
 
+class GameManager;
 
 class Menu
 {	
@@ -18,12 +20,14 @@ public:
 		menuTitle(txt) {}
 
 
+	int GetMaxSizeButton();
+
 	void AddButton(std::unique_ptr<Button> button);
 	void DysplayMenu();
 	void MoveUp();
 	void MoveDown();
 	void Select();
 
-	void NavigateToMenu(std::function<void()> function = {});
+	void NavigateToMenu(GameManager* gm, std::function<void()> function = {});
 };
 
